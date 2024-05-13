@@ -8,3 +8,4 @@ def handle_client(client_socket,client_address):
       if not message:
         print(f"Connection closed by {client_address}")
         break
+      print(f"[{client_address[0]}:{client_address[1]}]: {message}")
