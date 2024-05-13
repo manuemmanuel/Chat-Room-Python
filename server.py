@@ -13,3 +13,4 @@ def handle_client(client_socket,client_address):
     except:
       print(f"Connection closed by {client_address}")
       break
+client_socket.close()
