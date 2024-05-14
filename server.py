@@ -23,6 +23,8 @@ def broadcast(message, sender_socket):
                 remove_client(client)
 
 def remove_client(client):
+    if client in clients:
+        remove_client(client)
 
 
 
