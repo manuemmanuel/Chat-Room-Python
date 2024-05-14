@@ -21,4 +21,10 @@ def broadcast(message, sender_socket):
             except:
                 client.close()
                 remove_client(client)
-                
+
+def remove_client(client):
+
+
+
+def main():
+    
