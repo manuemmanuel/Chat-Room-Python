@@ -32,4 +32,4 @@ def main():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind((host, port))
     server_socket.listen()
-    
+    print(f"Server is listening for incoming connections on {host}:{port}")
