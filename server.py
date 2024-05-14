@@ -16,5 +16,9 @@ def handle_client(client_socket, client_address):
 
     client_socket.close()
 def broadcast(message, sender_socket):
-    for client in clients:
-        if client != sender_socket:
+            try:
+                client.send(message.encode('utf-8'))
+            except:
+                client.close()
+                remove_client(client)
+                
