@@ -29,4 +29,5 @@ def remove_client(client):
 def main():
     host = socket.gethostbyname(socket.gethostname())
     port = 5555
+    server_socket = socket.socket()
     
