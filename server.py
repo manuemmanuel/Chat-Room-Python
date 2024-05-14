@@ -27,4 +27,5 @@ def remove_client(client):
 
 
 def main():
+    host = socket.gethostbyname(socket.gethostname())
     
