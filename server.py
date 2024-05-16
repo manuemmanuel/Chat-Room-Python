@@ -35,3 +35,4 @@ def main():
     print(f"Server is listening for incoming connections on {host}:{port}")
     while True:
         client_socket, client_address = server_socket.accept()
+        clients.append(client_socket)
