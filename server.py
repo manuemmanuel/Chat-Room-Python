@@ -40,3 +40,4 @@ def main():
         client_thread.start()
 
 if __name__ == "__main__":
+    clients = []
