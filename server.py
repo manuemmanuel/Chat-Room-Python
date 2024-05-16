@@ -36,3 +36,4 @@ def main():
     while True:
         client_socket, client_address = server_socket.accept()
         clients.append(client_socket)
+        client_thread = thread.Thread(target = handle_clients)
