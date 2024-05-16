@@ -33,3 +33,5 @@ def main():
     server_socket.bind((host, port))
     server_socket.listen()
     print(f"Server is listening for incoming connections on {host}:{port}")
+    while True:
+        
