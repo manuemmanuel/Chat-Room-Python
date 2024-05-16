@@ -38,3 +38,5 @@ def main():
         clients.append(client_socket)
         client_thread = thread.Thread(target = handle_client, args = (client_socket, client_address))
         client_thread.start()
+
+if __name__ == "__main__":
