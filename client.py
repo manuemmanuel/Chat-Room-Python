@@ -1,8 +1,8 @@
 import socket
 import threading
 
-def receive_messages():
+def receive_messages(client_socket):
 
-def send_messages():
+def send_messages(client_socket):
 
 def main():
