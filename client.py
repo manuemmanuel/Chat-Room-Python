@@ -11,6 +11,6 @@ def receive_messages(client_socket):
 
 def send_messages(client_socket):
   while True:
-    
-
+    message = input("[You]: ")
+    client_socket.send(message.encode('utf-8'))
 def main():
