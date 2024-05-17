@@ -4,7 +4,8 @@ import threading
 def receive_messages(client_socket):
   while True:
     try:
-
+      message = client_socket.recv(1024).decode('utf-8')
+      print("\n[Server]:",message)
     except:
       
 
