@@ -8,3 +8,6 @@ def receive_messages(client_socket):
       if not message:
         print("Connection to the server closed.")
         break
+
+def send_messages(client_socket):
+  
