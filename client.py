@@ -10,4 +10,9 @@ def receive_messages(client_socket):
         break
 
 def send_messages(client_socket):
-  
+  while True:
+    try:
+
+    except:
+
+      break
