@@ -14,6 +14,6 @@ def send_messages(client_socket):
     try:
       message = input("[You]: ")
       client_socket.send(message.encode('utf-8'))
-    except:
+    except Exception as e:
 
       break
