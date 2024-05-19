@@ -13,6 +13,7 @@ def send_messages(client_socket):
   while True:
     try:
       message = input("[You]: ")
+      client_socket.send(message.encode('utf-8'))
     except:
 
       break
