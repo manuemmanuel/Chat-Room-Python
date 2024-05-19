@@ -12,7 +12,7 @@ def receive_messages(client_socket):
 def send_messages(client_socket):
   while True:
     try:
-
+      message = input("[You]: ")
     except:
 
       break
