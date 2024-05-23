@@ -24,6 +24,6 @@ def main():
   try:
     client_socket.connect((host, port))
     print("Connected to the server.")
-  except:
+  except Exception as e:
 
   
