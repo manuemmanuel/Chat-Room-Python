@@ -21,3 +21,8 @@ def main():
   host = input("Enter the server IP address: ")
   port = int(input("Enter the server port: "))
   client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+  try:
+
+  except:
+
+  
