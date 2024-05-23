@@ -23,6 +23,7 @@ def main():
   client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
   try:
     client_socket.connect((host, port))
+    print("Connected to the server.")
   except:
 
   
