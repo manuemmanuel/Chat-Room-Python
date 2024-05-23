@@ -17,3 +17,4 @@ def send_messages(client_socket):
         except Exception as e:
             print(f"Error sending message: {e}")
             break
+def main():
