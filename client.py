@@ -26,5 +26,6 @@ def main():
     print("Connected to the server.")
   except Exception as e:
     print(f"Unable to connect to the server: {e}")
+    return
 
   
