@@ -22,7 +22,7 @@ def main():
   port = int(input("Enter the server port: "))
   client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
   try:
-
+    client_socket.connect((host, port))
   except:
 
   
