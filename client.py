@@ -18,5 +18,5 @@ def send_messages(client_socket):
             print(f"Error sending message: {e}")
             break
 def main():
-  host = input()
+  host = input("Enter the server IP address: ")
   port = int(input())
