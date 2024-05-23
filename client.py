@@ -19,4 +19,4 @@ def send_messages(client_socket):
             break
 def main():
   host = input()
-  port = input()
+  port = int(input())
