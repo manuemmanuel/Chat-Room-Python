@@ -2,12 +2,16 @@ import socket
 import threading
 
 def receive_messages(client_socket):
-  while True:
-    try:
-      message = client_socket.recv(1024).decode('utf-8')
-      if not message:
-        print("Connection to the server closed.")
-        break
+    while True:
+        try:
+            message = client_socket.recv(1024).decode('utf-8')
+            if not message:
+                print("Connection to the server closed.")
+                break
+            print("\n[Server]:", message)
+        except Exception as e:
+            print(f"Error receiving message: {e}")
+            break
 
 def send_messages(client_socket):
     while True:
@@ -17,21 +21,22 @@ def send_messages(client_socket):
         except Exception as e:
             print(f"Error sending message: {e}")
             break
+
 def main():
-  host = input("Enter the server IP address: ")
-  port = int(input("Enter the server port: "))
-  client_socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-  try:
-    client_socket.connect((host, port))
-    print("Connected to the server.")
-  except Exception as e:
-    print(f"Unable to connect to the server: {e}")
-    return
-    
+    host = input("Enter the server IP address: ")
+    port = int(input("Enter the server port: "))
+    client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    try:
+        client_socket.connect((host, port))
+        print("Connected to the server.")
+    except Exception as e:
+        print(f"Unable to connect to the server: {e}")
+        return
+      
     receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
     receive_thread.start()
-
     send_thread = threading.Thread(target=send_messages, args=(client_socket,))
     send_thread.start()
+
 if __name__ == "__main__":
-  main()
+    main()
