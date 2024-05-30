@@ -27,6 +27,7 @@ def main():
   except Exception as e:
     print(f"Unable to connect to the server: {e}")
     return
-    receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
+    
+  receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
 
   
