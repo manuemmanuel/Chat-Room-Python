@@ -28,7 +28,8 @@ def main():
     print(f"Unable to connect to the server: {e}")
     return
     
-receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
-receive_thread.start()
+    receive_thread = threading.Thread(target=receive_messages, args=(client_socket,))
+    receive_thread.start()
 
-send_thread = threading.Thread(target=send_messages, args=(client_socket,))
+    send_thread = threading.Thread(target=send_messages, args=(client_socket,))
+    send_thread.start()
