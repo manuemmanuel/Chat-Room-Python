@@ -33,3 +33,5 @@ def main():
 
     send_thread = threading.Thread(target=send_messages, args=(client_socket,))
     send_thread.start()
+if __name__ == "__main__":
+  
